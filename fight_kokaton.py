@@ -157,7 +157,7 @@ class Explosion:
     def update(self, screen: pg.Surface):
         self._life -= 1
         if self._life == 0:
-            self.kill()
+            self.kill() # self.kill()でexplosionを消滅させる。
         else:
             if self.img == self.explodes[0]:
                 self.img = self.explodes[1]
