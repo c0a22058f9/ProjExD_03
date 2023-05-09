@@ -204,7 +204,7 @@ def main():
             for i, bomb in enumerate(bombs):
                 if beam._rct.colliderect(bomb._rct):
                     beam = None
-                    screen.blit(pg.transform.rotozoom(pg.image.load(f"ex03/fig/explosion.gif"), 0, 5.0))
+                    screen.blit(pg.transform.rotozoom(pg.image.load(f"ex03/fig/explosion.gif"), 0, 5.0), [100,100])
                     del bombs[i]
                     bird.change_img(6, screen)
                     break
