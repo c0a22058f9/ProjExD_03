@@ -61,6 +61,7 @@ class Bird:
         self._img = pg.transform.rotozoom(pg.image.load(f"ex03/fig/{num}.png"), 0, 2.0)
         screen.blit(self._img, self._rct)
 
+
     def update(self, key_lst: list[bool], screen: pg.Surface):
         """
         押下キーに応じてこうかとんを移動させる
@@ -171,6 +172,7 @@ def main():
             if beam._rct.colliderect(bomb._rct):
                 beam = None
                 bomb = None
+                bird.change_img(6, screen) # ビームと爆弾が衝突したら、こうかとんが喜ぶ
         pg.display.update()
         clock.tick(1000)
 
